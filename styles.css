@@ -3,3 +3,49 @@
     box-sizing: border-box;
     padding: 0;
 }
+
+
+
+.header{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: white;
+    height: 50px;
+}
+
+.header a, li{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+}
+
+header > nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20%;
+    padding: 0 4rem 0 0;
+}
+
+header > nav ul a:hover{
+    background-color: white;
+    color: black;
+}
+
+header > h1{
+    font-size: 1rem;
+    padding-left: 4rem;
+}
+
+.form-active{
+    display: block;
+}
+
+.form{
+    display: none;
+}
+

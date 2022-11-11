@@ -3,7 +3,7 @@ let activeUsers = [];
 let Users = []
 const submitBtn = document.querySelector('#submitBtn');
 submitBtn.addEventListener('click', () => {
-    const user = document.querySelector('#username').value;
+    const user = document.querySelector('#username').value.toUpperCase();
     const userPassword = document.querySelector('#password').value;
     if(Users.indexOf(user)){
         activeUsers.push({user, userPassword});
@@ -30,7 +30,7 @@ loginBtn.addEventListener('click', () => {
    const userLogin = document.querySelector('#usernameLogin').value;
    const loginPassword = document.querySelector('#passwordLogin').value;
    for(i = 0; i < activeUsers.length; i++){
-         if(activeUsers[i].user === userLogin.value && activeUsers[i].userPassword === loginPassword.value){
+         if(activeUsers[i].user === userLogin && activeUsers[i].userPassword === loginPassword){
               alert("Login successful")
          }else{
               alert("Login failed")
@@ -40,3 +40,10 @@ loginBtn.addEventListener('click', () => {
 
 
 //login end
+
+//when login is clicked login form appears
+const login = document.querySelector('#login');
+login.addEventListener('click', () => {
+    document.querySelector('.loginForm').style.display = "block";
+    document.querySelector('.signUpForm').style.display = "none";
+});

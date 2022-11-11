@@ -8,15 +8,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form>
+    <header class="header">
+        <h1>Dr. Food</h1>
+        <nav>
+            <ul>
+                <li><a href="" id="login">Login</a></li>
+                <li><a href="">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form class="form">
         <input type="text" id="username" placeholder="Select Username">
-        <input type="text" id="password" placeholder="Select Password">
+        <input type="password" id="password" placeholder="Select Password">
         <button type="button" id="submitBtn">Submit</button>
     </form>
-    <form>
+    <form class="form">
         <input type="text" id="usernameLogin" placeholder="Enter your Username">
-        <input type="text" id="passwordLogin" placeholder="Enter your Password">
-        <button id="loginBtn">Login</button>
+        <input type="password" id="passwordLogin" placeholder="Enter your Password">
+        <button type="button" id="loginBtn">Login</button>
     </form>
     <script src="script.js"></script>
 </body>
