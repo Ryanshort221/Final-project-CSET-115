@@ -10,6 +10,11 @@ submitBtn.addEventListener('click', () => {
         Users.push(user)
         alert("You have successfully signed up")
         console.log(activeUsers)
+        let loginForm = document.querySelector('.loginForm');
+        loginForm.classList.remove('form-Active');
+        loginForm.classList.add('form');
+
+
     }else{
         alert("Username already in use")
         return;
@@ -44,6 +49,8 @@ loginBtn.addEventListener('click', () => {
 //when login is clicked login form appears
 const login = document.querySelector('#login');
 login.addEventListener('click', () => {
-    document.querySelector('.loginForm').style.display = "block";
-    document.querySelector('.signUpForm').style.display = "none";
-});
+    let loginForm = document.querySelector('.loginForm');
+    loginForm.classList.remove('form');
+    loginForm.classList.add('form-Active');
+    
+    });
