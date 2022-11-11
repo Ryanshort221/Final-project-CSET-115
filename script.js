@@ -1,3 +1,4 @@
+//sign up start
 let activeUsers = [];
 let Users = []
 const submitBtn = document.querySelector('#submitBtn');
@@ -13,3 +14,22 @@ submitBtn.addEventListener('click', () => {
         
     console.log(activeUsers);
 });
+//end of sign up
+
+//login start
+//check if user exists
+const loginBtn = document.querySelector('#loginBtn');
+loginBtn.addEventListener('click', () => {
+   const userLogin = document.querySelector('#usernameLogin').value;
+   const loginPassword = document.querySelector('#passwordLogin').value;
+   for(i = 0; i < activeUsers.length; i++){
+         if(activeUsers[i].user === userLogin && activeUsers[i].userPassword === loginPassword){
+              alert("Login successful")
+         }else{
+              alert("Login failed")
+         }     
+   }
+});
+
+
+//login end
