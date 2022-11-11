@@ -1,6 +1,10 @@
 let activeUsers = [];
-let userNames = [];
-const submitBtn = document.querySelector('#submitBtn');
-submitBtn.addEventListener('click', () => {
-    const user = document.querySelector('#username').value;
-    const userPassword = document.querySelector('#password').value;
+
+function Submit(){
+    let user = document.getElementById("username").value;
+    let userpassword = document.getElementById("password").value;
+    activeUsers.push({user, userpassword})
+    console.log(activeUsers)
+}
+   
+    
