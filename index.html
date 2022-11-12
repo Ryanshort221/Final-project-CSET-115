@@ -6,27 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryan & Dalton Final project CSET 115</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<div class="container">
     <header class="header">
         <h1>Dr. Food</h1>
+        <ion-icon name="restaurant-outline"></ion-icon>
         <nav>
             <ul>
+                <li><a href="#" type="button" id="signup">Signup</a></li>
                 <li><a href="#" type="button" id="login">Login</a></li>
-                <li><a href="">Signup</a></li>
             </ul>
         </nav>
     </header>
-    <form class="loginForm form">
-        <input type="text" id="username" placeholder="Select Username">
-        <input type="password" id="password" placeholder="Select Password">
-        <button type="button" id="submitBtn">Submit</button>
-    </form>
-    <form class="form">
-        <input type="text" id="usernameLogin" placeholder="Enter your Username">
-        <input type="password" id="passwordLogin" placeholder="Enter your Password">
-        <button type="button" id="loginBtn">Login</button>
-    </form>
+    <div class="formContainer">
+        <div class="formSection formSection-hidden" id="formSection1">
+        <form class="signupForm">
+            Sign Up
+            <input type="text" id="username" placeholder="Select Username">
+            <input type="password" id="password" placeholder="Select Password">
+            <button class="btn" type="button" id="submitBtn">Submit</button>
+        </form>
+    </div>
+    <div class="formSection formSection-hidden" id="formSection2">
+        <form class="loginForm">
+            Login
+            <input type="text" id="usernameLogin" placeholder="Enter your Username">
+            <input type="password" id="passwordLogin" placeholder="Enter your Password">
+            <button class="btn" type="button" id="loginBtn">Login</button>
+        </form>
+    </div>
+</div>
+    <div class="main">
+        <div class="mainContent">
+            <h2>How to use Dr. Food</h2>
+            <p>Dr. Food is very easy to use. Simply click on the signup button to create an account. Once you have created an account, you can login to your account and go to our home page to check out our products!</p>
+        </div>
+    </div>
+    <div class="redirect-hidden redirect"> Verifying login information you will be redirected to the home page shortly...</div>
+    </div>
+
+    <footer class="footer">
+        <p>Dr. Food &copy; 2021</p>
+        <h1>By Dalton & Ryan</h1>
+    </footer>
+     
+</div>
+
     <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
