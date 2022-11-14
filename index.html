@@ -13,7 +13,7 @@
 <div class="container">
     <header class="header">
         <h1>Dr. Food</h1>
-        <ion-icon name="restaurant-outline"></ion-icon>
+        <ion-icon class="restaurant" name="restaurant-outline"></ion-icon>
         <nav>
             <ul>
                 <li><a href="#" type="button" id="signup">Signup</a></li>
@@ -26,7 +26,10 @@
         <form class="signupForm">
             Sign Up
             <input type="text" id="username" placeholder="Select Username">
+            <ion-icon class="personIcon" name="person-outline" id="signupFormToolTip"></ion-icon>
+            <span class="tooltip tooltip-hidden">Message about username requirements</span>
             <input type="password" id="password" placeholder="Select Password">
+            <ion-icon class="lockIcon showPassword1" name="lock-closed-outline"></ion-icon>
             <button class="btn" type="button" id="submitBtn">Submit</button>
         </form>
     </div>
@@ -34,26 +37,39 @@
         <form class="loginForm">
             Login
             <input type="text" id="usernameLogin" placeholder="Enter your Username">
+            <ion-icon class="personIcon" name="person-outline"></ion-icon>
             <input type="password" id="passwordLogin" placeholder="Enter your Password">
+            <ion-icon class="lockIcon showPassword2" name="lock-closed-outline"></ion-icon>
             <button class="btn" type="button" id="loginBtn">Login</button>
         </form>
     </div>
 </div>
     <div class="main">
         <div class="mainContent">
+            <h2>Our Mission</h2>
+            <p>Our mission is to provide the best food for our customers. We want to make sure that our customers are happy with our products and that they are getting the best food possible.</p>
+        </div>  
+        <div class="mainContent">
             <h2>How to use Dr. Food</h2>
             <p>Dr. Food is very easy to use. Simply click on the signup button to create an account. Once you have created an account, you can login to your account and go to our home page to check out our products!</p>
         </div>
-    </div>
-    <div class="redirect-hidden redirect"> Verifying login information you will be redirected to the home page shortly...</div>
-    </div>
+    </div> 
 
-    <footer class="footer">
+<footer class="footer">
         <p>Dr. Food &copy; 2021</p>
         <h1>By Dalton & Ryan</h1>
-    </footer>
+</footer>
      
 </div>
+<div class="redirect-hidden redirect">
+    <img src="images/success.gif" alt="">
+        <h2 class="redirectContent">redirecting...</h2>
+</div>
+<div class="redirect-hidden redirect redirectError">
+    <img src="images/error.gif" alt="">
+    <h2 class="redirectContent1">Error Try again</h2>
+</div>
+
 
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

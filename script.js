@@ -19,48 +19,47 @@ submitBtn.addEventListener('click', () => {
         return;
     }
 });
-
-
 //end of sign up start form button
 
 //login start
-
 //check if user exists login form login button
 const loginBtn = document.querySelector('#loginBtn');
 loginBtn.addEventListener('click', () => {
-   const userLogin = document.querySelector('#usernameLogin').value.toUpperCase();
-   const loginPassword = document.querySelector('#passwordLogin').value;
+   var userLogin = document.querySelector('#usernameLogin').value.toUpperCase();
+   var loginPassword = document.querySelector('#passwordLogin').value;
    for(i = 0; i < activeUsers.length; i++){
-         if(activeUsers[i].user === userLogin && activeUsers[i].userPassword === loginPassword){
-              alert("Login successful")
+         if(activeUsers[i].user[i] === userLogin[i] && activeUsers[i].userPassword[i] === loginPassword[i]){
               console.log(activeUsers, userLogin)
             let formSection = document.querySelector('#formSection2');
             formSection.classList.add('formSection-hidden');
             formSection.classList.remove('formSection-active');
-
-            //start of before switching pages a pop up appears saying being redirected
-            let redirect = document.querySelector('.redirect');
-            redirect.classList.add('redirect-active');
-            redirect.classList.remove('redirect-hidden');
+            let redirectSuccess = document.querySelector('.redirect');
+            redirectSuccess.classList.add('redirect-active');
+            redirectSuccess.classList.remove('redirect-hidden');
             setTimeout(() => {
-                redirect.classList.add('redirect-hidden');
-                redirect.classList.remove('redirect-active');
+                redirectSuccess.classList.add('redirect-hidden');
+                redirectSuccess.classList.remove('redirect-active');
             }, 3000);
             setTimeout(() => {
                 window.location.href = "index2.html";
             }, 3000);
-            //end of before switching pages a pop up appears before being redirected
             return;
 
          }else{
-              alert("Login failed")
+            let redirectError = document.querySelector('.redirectError');
+            redirectError.classList.add('redirect-active');
+            redirectError.classList.remove('redirect-hidden');
+            setTimeout(() => {
+                redirectError.classList.add('redirect-hidden');
+                redirectError.classList.remove('redirect-active');
+            }, 3000);
+
               console.log(activeUsers)
               return;
          }     
    }
 });
 console.log(activeUsers)
-
 //login end
 
 //when signup is clicked login form appears signup button in nav bar
@@ -78,4 +77,40 @@ login.addEventListener('click', () => {
     let formSection = document.querySelector('#formSection2');
     formSection.classList.remove('formSection-hidden');
     formSection.classList.add('formSection-active'); 
+});
+
+//when lock in the signup form is clicked password appears/dissappears
+const signUplock = document.querySelector('.showPassword1');
+signUplock.addEventListener('click', () => {
+    const password = document.querySelector('#password');
+    if(password.type === "password"){
+        password.type = "text";
+    }else{
+        password.type = "password";
+    }
+});
+
+//when lock in the login form is clicked password appears/dissappears
+const loginLock = document.querySelector('.showPassword2');
+loginLock.addEventListener('click', () => {
+    const password = document.querySelector('#passwordLogin');
+    if(password.type === "password"){
+        password.type = "text";
+    }else{
+        password.type = "password";
+    }
+});
+
+
+// when person icon is hovered over in the login form a tooltip appears
+const personIcon = document.querySelector('#signupFormToolTip');
+personIcon.addEventListener('mouseover', () => {
+    let tooltip = document.querySelector('.tooltip');
+    tooltip.classList.add('tooltip-active');
+    tooltip.classList.remove('tooltip-hidden');
+});
+personIcon.addEventListener('mouseout', () => {
+    let tooltip = document.querySelector('.tooltip');
+    tooltip.classList.add('tooltip-hidden');
+    tooltip.classList.remove('tooltip-active');
 });
