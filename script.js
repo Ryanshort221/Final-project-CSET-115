@@ -28,7 +28,7 @@ loginBtn.addEventListener('click', () => {
    var userLogin = document.querySelector('#usernameLogin').value.toUpperCase();
    var loginPassword = document.querySelector('#passwordLogin').value;
    for(i = 0; i < activeUsers.length; i++){
-         if(activeUsers[i].user[i] === userLogin[i] && activeUsers[i].userPassword[i] === loginPassword[i]){
+         if(activeUsers[i].user === userLogin && activeUsers[i].userPassword === loginPassword){
             console.log(activeUsers, userLogin)
             let formSection = document.querySelector('#formSection2');
             formSection.classList.add('formSection-hidden');
