@@ -163,3 +163,9 @@ input[type=number]:hover{
 .gallery-item img{
     transition: all 0.5s ease-in-out;
 }
+
+#price{
+    position: relative;
+    left: -17vh;
+    top: 0.5vh;
+}
