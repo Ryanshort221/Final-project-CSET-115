@@ -93,6 +93,7 @@ header > h1:hover{
     width: 100%;
     height: 35vh;
     object-fit: cover;
+    border-radius: 15px;
 }
 
 .gallery-item{
@@ -146,4 +147,19 @@ input[type=number]{
     top: 92.5%;
     left: 10%;
     width: 2vw;
+    background-color: black;
+    color: white;
+}
+
+input[type=number]:hover{
+    background-color: white;
+    color: black;
+}
+
+.gallery-item img:hover{
+    transform: scale(0.9);
+    transition: all 0.5s ease-in-out;
+}
+.gallery-item img{
+    transition: all 0.5s ease-in-out;
 }
