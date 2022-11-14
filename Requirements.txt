@@ -1,0 +1,9 @@
+Normal Requirements-
+-Create login page/Signup page
+-Store signup/login information
+-Design page around particular item
+Expected Requirements-
+-Signup and Login forms are stored and verified against other active users to make sure no accounts have same name
+-Also make sure password is certain length 
+-The page will have a theme based on the product with high design quality
+Exciting Requirements- 
