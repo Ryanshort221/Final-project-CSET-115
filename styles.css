@@ -17,6 +17,7 @@ body{
     animation: animate 20s ease-in-out infinite;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 @keyframes animate {
@@ -313,4 +314,23 @@ input[type=password]{
 
 .tooltip-hidden{
     display: none;
+}
+
+.welcome{
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 10%;
+    font-size: 24px;
+    padding: 6px;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 200px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
 }
