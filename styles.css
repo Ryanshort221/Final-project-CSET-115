@@ -4,6 +4,35 @@
     padding: 0;
 }
 
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    animation: animate 20s ease-in-out infinite;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes animate {
+    0%, 100%{
+        background-image: url("images/background-1.jpg");
+    }
+    25%{
+        background-image: url("images/background-2.jpg");
+    }
+    50%{
+        background-image: url("images/background-3.jpeg");
+    }
+    75%{
+        background-image: url("images/background-5.jpg");
+    }
+}
 
 
 .header{
@@ -13,14 +42,26 @@
     justify-content: space-between;
     align-items: center;
     background-color: #000;
-    color: white;
-    height: 50px;
+    height: 5rem;
+    font-size: 20px;
 }
 
 .header a, li{
     text-decoration: none;
     list-style-type: none;
+    text-align: center;
+    padding: 10px;
     color: white;
+    border-radius: 5px; 
+}
+
+.header li:hover, .header a:hover{
+    border-radius: 5px;
+    background-color: #fff;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
 }
 
 header > nav ul{
@@ -28,24 +69,248 @@ header > nav ul{
     flex-direction: row;
     align-items: center;
     gap: 20%;
-    padding: 0 4rem 0 0;
-}
-
-header > nav ul a:hover{
-    background-color: white;
-    color: black;
+    padding-right: 5rem;
 }
 
 header > h1{
     font-size: 1rem;
-    padding-left: 4rem;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 100px;
 }
 
-.form-active{
-    display: block;
+header > h1:hover{
+    color: black;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 100px;
+    font-weight: 600;
 }
 
-.form{
+
+ion-icon{
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.restaurant{
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.restaurant:hover{
+    color: black;
+    background-color: white;
+
+}
+
+form{
+    text-align: center;
+    font-weight: 600;
+}
+
+
+.formContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    transform:  translateY(-50%) translateX(-50%);
+    gap: .5rem;
+}
+
+.signupForm, .loginForm {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 1.5rem 1rem 2rem 1rem;
+    background-color: white;
+    box-shadow: 3px 3px 3px #888888;
+}
+
+.personIcon{
+    color: black;
+    position: absolute;
+    top: 30%;
+    left: 78%;
+    padding: 0;
+    margin: 0;
+}
+
+.personIcon:hover{
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.lockIcon{
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 78%;
+    padding: 0;
+    margin: 0;
+}
+
+.lockIcon:hover{
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.formSection-hidden{
     display: none;
 }
 
+.formSection-active{
+    display: block;
+}
+
+input[type=text], 
+input[type=password]{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px #888888;
+}
+
+.btn{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 3px 3px 3px #888888;
+}
+
+.btn:hover{
+    background-color: #fff;
+    color: black;
+    font-weight: 600;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+}
+
+.footer > p{
+    margin-left: 15px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.footer > h1{
+    padding: 10px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.footer p:hover, .footer h1:hover{
+    margin-left: 10px;
+    color: black;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.redirect{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translateY(-50%) translateX(-50%);
+}
+
+.redirect > img{
+    height: 15vh;
+    width: 10vw;
+}
+.redirectContent{
+    border: 1px solid #d3d3d3;
+    width: 10vw;
+    height: 5vh;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #d3d3d3;
+    transform:  translateY(-30%);
+}
+
+.redirectError{
+    border: 1px solid;
+    overflow: hidden;
+}
+
+.redirect-active{
+    display: block;
+}
+
+.redirect-hidden{
+    display: none;
+}
+
+.redirectContent1{
+    border: 1px solid #d3d3d3;
+    width: 10vw;
+    height: 7vh;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #d3d3d3;
+    transform:  translateY(-30%);
+    margin-bottom: -18.5px;
+    padding-bottom: 1vh;
+}
+
+
+.tooltip{
+    z-index: 100;
+    top: 25%;
+    position: absolute;
+    right: -100%;
+    background-color: #000;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 10px;
+    height: fit-content;
+    text-align: center;
+    width: fit-content
+}
+
+.tooltip-active{
+    display: block;
+}
+
+.tooltip-hidden{
+    display: none;
+}
