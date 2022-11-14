@@ -29,7 +29,7 @@ loginBtn.addEventListener('click', () => {
    var loginPassword = document.querySelector('#passwordLogin').value;
    for(i = 0; i < activeUsers.length; i++){
          if(activeUsers[i].user[i] === userLogin[i] && activeUsers[i].userPassword[i] === loginPassword[i]){
-              console.log(activeUsers, userLogin)
+            console.log(activeUsers, userLogin)
             let formSection = document.querySelector('#formSection2');
             formSection.classList.add('formSection-hidden');
             formSection.classList.remove('formSection-active');
@@ -62,21 +62,13 @@ loginBtn.addEventListener('click', () => {
 console.log(activeUsers)
 //login end
 
-//when signup is clicked login form appears signup button in nav bar
+//when signup is clicked signup form appears signup button in nav bar
 const signup = document.querySelector('#signup');
 signup.addEventListener('click', () => {
     let formSection = document.querySelector('#formSection1');
     formSection.classList.remove('formSection-hidden');
     formSection.classList.add('formSection-active');
 
-});
-
-//when login is clicked login form appears login button in nav bar
-const login = document.querySelector('#login');
-login.addEventListener('click', () => {
-    let formSection = document.querySelector('#formSection2');
-    formSection.classList.remove('formSection-hidden');
-    formSection.classList.add('formSection-active'); 
 });
 
 //when lock in the signup form is clicked password appears/dissappears
@@ -90,6 +82,15 @@ signUplock.addEventListener('click', () => {
     }
 });
 
+//when login is clicked login form appears login button in nav bar
+const login = document.querySelector('#login');
+login.addEventListener('click', () => {
+    let formSection = document.querySelector('#formSection2');
+    formSection.classList.remove('formSection-hidden');
+    formSection.classList.add('formSection-active'); 
+});
+
+
 //when lock in the login form is clicked password appears/dissappears
 const loginLock = document.querySelector('.showPassword2');
 loginLock.addEventListener('click', () => {
@@ -101,7 +102,6 @@ loginLock.addEventListener('click', () => {
     }
 });
 
-
 // when person icon is hovered over in the login form a tooltip appears
 const personIcon = document.querySelector('#signupFormToolTip');
 personIcon.addEventListener('mouseover', () => {
@@ -109,6 +109,8 @@ personIcon.addEventListener('mouseover', () => {
     tooltip.classList.add('tooltip-active');
     tooltip.classList.remove('tooltip-hidden');
 });
+
+//when mouse moves off person icon the tooltip disappears
 personIcon.addEventListener('mouseout', () => {
     let tooltip = document.querySelector('.tooltip');
     tooltip.classList.add('tooltip-hidden');
