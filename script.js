@@ -64,7 +64,9 @@ console.log(activeUsers)
 
 //when signup is clicked login form appears signup button in nav bar
 const signup = document.querySelector('#signup');
+const main = document.querySelector('.maincontent');
 signup.addEventListener('click', () => {
+    main.classList.add('formSection-hidden')
     let formSection = document.querySelector('#formSection1');
     formSection.classList.remove('formSection-hidden');
     formSection.classList.add('formSection-active');
@@ -74,6 +76,7 @@ signup.addEventListener('click', () => {
 //when login is clicked login form appears login button in nav bar
 const login = document.querySelector('#login');
 login.addEventListener('click', () => {
+    main.classList.add('formSection-hidden');
     let formSection = document.querySelector('#formSection2');
     formSection.classList.remove('formSection-hidden');
     formSection.classList.add('formSection-active'); 
