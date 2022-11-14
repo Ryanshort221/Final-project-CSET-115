@@ -22,16 +22,16 @@ body{
 
 @keyframes animate {
     0%, 100%{
-        background-image: url("images/background-1.jpg");
+        background-image: url("images/background-6.jpg");
     }
     25%{
-        background-image: url("images/background-2.jpg");
+        background-image: url("images/background-8.jpg");
     }
     50%{
-        background-image: url("images/background-3.jpeg");
+        background-image: url("images/background-9.jpg");
     }
     75%{
-        background-image: url("images/background-5.jpg");
+        background-image: url("images/background-10.webp");
     }
 }
 
@@ -74,12 +74,12 @@ header > nav ul{
 }
 
 header > h1{
-    font-size: 1rem;
     padding: 10px;
     color: white;
     font-size: 20px;
     text-align: center;
     margin-left: 100px;
+    cursor: pointer;
 }
 
 header > h1:hover{
